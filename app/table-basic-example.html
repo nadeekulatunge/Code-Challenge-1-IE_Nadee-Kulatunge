@@ -1,4 +1,6 @@
 <h4>{{name}}</h4>
+<h6>Select X, Y and Face and Click REPORT to get the Output</h6>
+<h6>Click PLACE to set the position 0,0. NORTH</h6>
 <p>
   <span class="lbl">X</span>
 
@@ -32,13 +34,14 @@
 </p>
 
 <p>
-  <button class="btn" mat-button (click)="clickPlace()">PLACE</button>
+  <button class="btn" mat-button (click)="clickPlace()">
+    PLACE (Set Initial Position)
+  </button>
   <button class="btn" mat-button (click)="clickMove()">MOVE</button>
   <button class="btn" mat-button (click)="clickLeft()">LEFT</button>
   <button class="btn" mat-button (click)="clickRight()">RIGHT</button>
   <button class="btn" mat-button (click)="clickReport()">REPORT</button>
 </p>
 <div *ngIf="showOutput">
-<span > Output -</span> {{StartRow}} {{StartColumn}}
-{{Direction}}
+  <span> Output -</span> {{StartRow}} {{StartColumn}} {{Direction}}
 </div>
