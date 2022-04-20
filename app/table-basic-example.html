@@ -1,0 +1,44 @@
+<h4>{{name}}</h4>
+<p>
+  <span class="lbl">X</span>
+
+  <input
+    style="width: 40px"
+    max="4"
+    min="0"
+    type="number"
+    matInput
+    placeholder="Enter X Position"
+    [(ngModel)]="StartRow"
+  />
+  <span class="lbl">Y</span>
+  <input
+    style="width: 40px"
+    max="4"
+    min="0"
+    type="number"
+    matInput
+    placeholder="Enter X Position"
+    [(ngModel)]="StartColumn"
+  />
+
+  <span class="lbl">Facing</span>
+  <select matNativeControl required [(ngModel)]="Direction">
+    <option value="NORTH">NORTH</option>
+    <option value="SOUTH">SOUTH</option>
+    <option value="WEST">WEST</option>
+    <option value="EAST">EAST</option>
+  </select>
+</p>
+
+<p>
+  <button class="btn" mat-button (click)="clickPlace()">PLACE</button>
+  <button class="btn" mat-button (click)="clickMove()">MOVE</button>
+  <button class="btn" mat-button (click)="clickLeft()">LEFT</button>
+  <button class="btn" mat-button (click)="clickRight()">RIGHT</button>
+  <button class="btn" mat-button (click)="clickReport()">REPORT</button>
+</p>
+<div *ngIf="showOutput">
+<span > Output -</span> {{StartRow}} {{StartColumn}}
+{{Direction}}
+</div>

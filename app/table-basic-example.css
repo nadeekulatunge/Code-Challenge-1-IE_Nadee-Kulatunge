@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+.btn{
+  background-color:rgb(216, 175, 175);
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right:5px;
+  border-radius: 4px;
+  box-shadow: 0px 2.5px 4px rgb(50 50 93 / 30%);
+  cursor: pointer;
+}
+
+.lbl{
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-right:5px;
+  font-weight: bold;
+}
